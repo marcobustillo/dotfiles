@@ -1,0 +1,44 @@
+[user]
+	name = Marco Bustillo
+	email = marcobustillo21@gmail.com
+
+[color]
+	ui = auto
+
+[fetch]
+	prune = true
+
+[alias]
+	dm = "!git fetch && git branch --merged | grep -v 'main' | xargs git branch -D"
+	l = log --pretty=online -n 20 --graph --abbrev-commit
+	s = status -s
+	c = clone --recursive
+	unstage-local = "!git reset HEAD^1"
+
+[init]
+	defaultBranch = main
+
+[status]
+	short = true
+
+[apply]
+	whitespace = true
+
+[core]
+	# Treat spaces before tabs and all kinds of trailing whitespace as an error
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	autocrlf = true
+	editor = vim
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[help]
+	autocorrect = 1
+
